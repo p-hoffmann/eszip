@@ -1,1 +1,1 @@
-b.ts
+export const b = "b";
