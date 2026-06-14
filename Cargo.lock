@@ -586,9 +586,9 @@ dependencies = [
 
 [[package]]
 name = "deno_lockfile"
-version = "0.32.0"
+version = "0.49.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "79df4fa29c2e423822bfef1ab5e83093b48481824d5ef7a61c1de1c32c7c302a"
+checksum = "1984f4d97a53842dd99937185707224cb6f5ce60d6f04bf7d68dd93a68b866eb"
 dependencies = [
  "async-trait",
  "deno_semver",
@@ -596,6 +596,12 @@ dependencies = [
  "serde_json",
  "thiserror",
 ]
+
+[[package]]
+name = "deno_maybe_sync"
+version = "0.34.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "eb2ce6efdde2e0314c3c450eb386a65ccde6497fe4f40d0314c094e32b1bbfc3"
 
 [[package]]
 name = "deno_media_type"
@@ -611,15 +617,16 @@ dependencies = [
 
 [[package]]
 name = "deno_npm"
-version = "0.43.0"
+version = "0.59.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ef06bf417c6ca4298c0dafa321a36e5530afee733b977d0d2bcaa6870b26cd82"
+checksum = "cd28719e93dd1187bc3671acf96cdabe0c920369e130ab9a1f6833c41515ecaf"
 dependencies = [
  "async-trait",
  "capacity_builder",
  "chrono",
  "deno_error",
  "deno_lockfile",
+ "deno_package_json",
  "deno_semver",
  "futures",
  "indexmap",
@@ -627,6 +634,25 @@ dependencies = [
  "monch",
  "serde",
  "serde_json",
+ "thiserror",
+]
+
+[[package]]
+name = "deno_package_json"
+version = "0.49.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4d3b3383e1e1e5817312e766374d1bdaa131e00b0bc17ee10f0a448f6db6ef1e"
+dependencies = [
+ "boxed_error",
+ "capacity_builder",
+ "deno_error",
+ "deno_maybe_sync",
+ "deno_path_util",
+ "deno_semver",
+ "indexmap",
+ "serde",
+ "serde_json",
+ "sys_traits",
  "thiserror",
  "url",
 ]
@@ -646,9 +672,9 @@ dependencies = [
 
 [[package]]
 name = "deno_semver"
-version = "0.9.0"
+version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2625b7107cc3f61a462886d5fa77c23e063c1fd15b90e3d5ee2646e9f6178d55"
+checksum = "92d46d2fd6959170a6e9f6607a6f79683868fa82ceac56ca520ab014e4fa5b21"
 dependencies = [
  "capacity_builder",
  "deno_error",
@@ -1435,9 +1461,9 @@ dependencies = [
 
 [[package]]
 name = "log"
-version = "0.4.27"
+version = "0.4.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "13dc2df351e3202783a1fe0d44375f7295ffb4049267b0f3018346dc122a1d94"
+checksum = "953f07c43838f8e6f9758cab68bf5bed85465e7587ebe0b823f1bcd81978ad3a"
 
 [[package]]
 name = "memchr"
@@ -2691,9 +2717,9 @@ dependencies = [
 
 [[package]]
 name = "sys_traits"
-version = "0.1.17"
+version = "0.1.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4f74a2c95f72e36fa6bd04a40d15623a9904bab1cc2fa6c6135b09d774a65088"
+checksum = "5a79feaa49de4a6c8191bdbd5fb3eada50671e9367d874d1c12e3d36db131414"
 dependencies = [
  "js-sys",
  "sys_traits_macros",
